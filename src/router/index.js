@@ -22,7 +22,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: "/child", // ● 子应用在启动的时候会已/child为基准
   routes
 })
 

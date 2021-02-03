@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shadow DOM</title>
+</head>
+<body>
+    <div>
+        <p>hello world</p>
+        <div id="app"></div>
+    </div>
+
+    <script>
+        let appShadowDom = app.attachShadow({mode: 'closed'}); // 添加shadow属性，并不让外界访问
+        let pElm = document.createElement('p');
+        pElm.innerHTML = "hello universe";
+
+        let styleElm = document.createElement("style");
+        styleElm.textContent = `p{color:red}`
+
+        appShadowDom.appendChild(styleElm);
+        appShadowDom.appendChild(pElm);
+
+        // document.body.appendChild(pElm);
+        // 缺点: 挂载在body上的元素需要手动补充一下样式，如elementui的弹窗
+    </script>
+</body>
+</html>

@@ -27,3 +27,11 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+```
+● qiankun-base    基座分支
+● qiankun-child-first     子应用分支1
+● qiankun-child-second     子应用分支2
+● single-spa-base    基座分支
+● single-spa-child    子应用分支1
+```
